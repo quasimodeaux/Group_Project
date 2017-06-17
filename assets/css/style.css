@@ -1,0 +1,21 @@
+
+body{
+	background-color: black;
+}
+h4{
+	color:  white;
+}
+footer{
+	color: white;
+}
+#map {
+        height: 300px;
+        width: 100%;
+}
+
+.carousel{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+

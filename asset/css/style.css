@@ -1,0 +1,75 @@
+
+body{
+	background-color: black;
+}
+h4{
+	color:  white;
+}
+footer{
+	color: white;
+}
+#map {
+        height: 300px;
+        width: 100%;
+}
+.carousel{
+    margin-left: 80px;
+	margin-bottom: -200px;
+	margin-top: -80px;
+
+	
+}
+#weather{
+	margin-top: 40px;
+	margin-left: 180px;
+	position: absolute;
+	color: yellow;
+}
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+    opacity: 0.7;
+}
+video { 
+    display: block; 
+}
+.button-primary{
+    background-color: #F46F80;
+    padding: 1em;
+    width: 15em;
+    height: 0em;
+    opacity: 0.7;
+    border-radius: 0.2em;
+    border: 1px solid #C60098;
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+#foody_input{
+    width: 25em;
+    font-size: 1em;
+    background-color: white;
+   padding-left: 5px;
+}
+h5{
+     background-color:  #66b3ff;
+}
+p{
+ 
+    display: none;
+}
+.u-full-width{
+    padding-left: 80px;
+    background-color: white;
+}

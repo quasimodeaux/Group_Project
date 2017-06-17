@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Project google</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+-->
+
+  <link rel="stylesheet" href="asset/css/normalize.css">
+  <link rel="stylesheet" href="asset/css/skeleton.css">
+  <link rel ="stylesheet" href="asset/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+
+
+  <!--  Jquery
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <script type="text/javascript" src="asset/javascript/food.js"></script>
+
+
+  <!--  geolocation
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="https://maps.googleapis.com/maps/api/js?&libraries=places&sensor=false"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+
+
+
+<body>
+
+<div id="weather"><h4>Hungry? </h4>
+                  <h4>Ravenous? Famished?</h4> </div>
+
+<video playsinline autoplay muted loop  id="bgvid" >
+ <!-- <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">    
+  <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">    -->
+  <source src="http://images.all-free-download.com/footage_preview/webm/rain_132.webm" type="video/webm">    
+</video>  
+
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+
+
+  <div class="container">
+    <div class="row">
+    <div class="twelve columns">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XZ4azK8vEG8CYA0-GN6UFJ2QUIuQJOa8ZCVtCMGJIbQDRNuS" class="scale-with-grid">
+      <img src="assets/images/02.jpg" class="scale-with-grid">
+        <img src="assets/images/03.jpg" class="scale-with-grid"> 
+    </div>
+  </div>
+  </div>
+
+
+-->
+
+
+ <div class="container">
+    <div class="row">
+    <div class="twelve columns">
+
+
+    <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XZ4azK8vEG8CYA0-GN6UFJ2QUIuQJOa8ZCVtCMGJIbQDRNuS" class="scale-with-grid"></a>
+        <a class="carousel-item" href="#two!"><img src="asset/images/02.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="asset/images/03.jpg"></a>
+      
+
+    <!--
+        <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/200/200/nature/1"></a>
+        <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/200/200/nature/2"></a>
+        <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/200/200/nature/3"></a>
+        <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/200/200/nature/4"></a>
+        <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/200/200/nature/5"></a>
+        <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/200/200/nature/2"></a>
+        -->
+  </div>
+ 
+    </div>
+  </div>
+  </div>
+
+
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- second row Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <div class="row">
+
+  <div class="nine columns">
+          
+          <br>
+          <input class="button-primary" type="submit" id="add-food"  value="Eat some food"> 
+          <input class="u-full-width" type="text" placeholder="name of food" id="foody_input">
+       
+     
+
+      
+     
+          
+
+
+      <div id="map" ></div>
+  
+
+
+<!-- food list from jquery       <input type="text" id="foody_input" >
+
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <br>
+  <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+  <div class="panel panel-primary">
+
+    <!-- Panel Heading for the retrieved articles box -->
+    <div class="panel-heading">
+
+      <h4 class="panel-title"><strong><i class="fa fa-table"></i>   Top Results</strong></h4>
+
+    </div>
+
+    <!-- This main panel will hold each of the resulting articles -->
+    <div class="panel-body" id="well-section">
+    </div>
+  </div>
+
+
+</div>
+<!--
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- right column -->
+    <div class="three columns">
+
+
+
+
+
+    <br>
+    <h4>Quick Search</h4>
+
+          <input class="button-primary" type="submit" id="localweather"  value="Weather"> 
+          <br>
+        <input class="button-primary" type="submit" id="McDonald"  value="McDonald's">
+    <br>
+      <input class="button-primary" type="submit" id="Pizza"  value="Pizza"> 
+          <br>
+      <input class="button-primary" type="submit" id="Chinease"  value="Chinese">
+          <br>
+      <input class="button-primary" type="submit" id="Steak"  value="Steak">
+          <br>
+      <input class="button-primary" type="submit" id="Chipotle"  value="Chipotle">
+          <br>
+      <input class="button-primary" type="submit" id="WaWa"  value="WaWa">
+          <br>
+      <input class="button-primary" type="submit" id="Review"  value="Review"> 
+
+    
+
+
+  </div>
+  </div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- footer Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <footer>
+      <div class="twelve columns">
+
+    Copyright @  12th June 2017 assignment
+
+    </div>
+  </footer>
+</div">
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+<script type="text/javascript"   src="asset/javascript/script.js" ></script>
+<script type="text/javascript"   src="asset/javascript/mac.js" ></script>
+<script type="text/javascript"   src="asset/javascript/chinease.js" ></script>
+<script type="text/javascript"   src="asset/javascript/steak.js" ></script>
+<script type="text/javascript"   src="asset/javascript/wawa.js" ></script>
+<script type="text/javascript"   src="asset/javascript/chipotle.js" ></script>
+<script type="text/javascript"   src="asset/javascript/mapslocation.js" ></script>
+<script type="text/javascript"   src="asset/javascript/pizza.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+  </body>
+</html>
